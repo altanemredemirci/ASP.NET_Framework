@@ -1,0 +1,20 @@
+﻿@using _09_Controller.Models
+@model IEnumerable<Fakulte>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fakulteler</title>
+</head>
+<body>
+    <div> 
+        @Html.DropDownList("fakulteler",(List<SelectListItem>)ViewBag.Fakulteler)
+        <br /><br />     
+    </div>
+</body>
+</html>
