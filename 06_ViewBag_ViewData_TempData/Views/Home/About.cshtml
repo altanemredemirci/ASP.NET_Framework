@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <h1>@ViewBag.text1</h1>
+        <h1>@ViewData["text2"]</h1>
+        @*<h1>@TempData["text3"]</h1>*@
+
+        <a href="/Home/Contact">Contact</a><br /><br />
+
+        @Html.DropDownList("dersler")
+    </div>
+</body>
+</html>

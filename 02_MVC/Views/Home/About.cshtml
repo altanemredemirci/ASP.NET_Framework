@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+@{ string mesaj = "sayfa postback olmadı";}
+
+<!DOCTYPE html> 
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div> 
+        <h1>ABOUT</h1>
+      
+        <form action="/Home/Contact" method="get">
+            @if (IsPost)
+            {
+                mesaj = "sayfa postback oldu.";
+            }
+            @mesaj
+            <br />
+            <input type="text" name="username" /><br />
+            <input type="text" name="password" /><br />
+            <button type="submit">GÖNDER</button>
+        </form>
+    </div>
+</body>
+</html>

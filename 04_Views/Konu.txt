@@ -1,0 +1,20 @@
+﻿
+
+LAYOUT KAVRAMI,SECTION KAVRAMI
+
+Layout.cshtml içinde  @renderSection("categories",required=false); // her sayfada olmak zorunda değil
+
+kullanmak içinde section categories{ Html kodlarınızı }
+
+
+@*
+
+    Layout ile layout2 arasındaki fark nedir?
+       Login ve Register da Categories menüsü vardır.
+       Sadece registerda kategoriler olması için layout2 rendersection()
+
+    Home-Contact-About-Login  NAVBAR - LAYOUT.cshtml
+
+
+
+*@

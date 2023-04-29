@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        .kirmizi{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin:20px 0px 0px 250px">
+        <a href="/Anasayfa/About">HAKKIMIZDA</a>
+        <br />
+        @Html.ActionLink("HAKKIMIZDA","About")
+        <br />
+        <a href="@Url.Action("About","Anasayafa")">HAKKIMIZDA</a>
+        <br /><br />
+
+        <h1>ANASAYFA</h1><br />
+        <br />
+        <br />
+        <input type="text" name="ad" value="Adınız" /><br />
+        @Html.TextBox("ad","Adınız")<br />
+        <textarea cols="30" rows="10"></textarea><br />
+        @Html.TextArea("ozgecmis","Özgeçmişiniz...",10,30,null)<br />
+        @Html.ActionLink("Anasayfa", "Index", "Home", new {ad="altan", soyad = "demirci" }, new {title="Index sayfasına yönlendirir.", @class="kirmizi"})
+    </div>
+</body>
+</html>

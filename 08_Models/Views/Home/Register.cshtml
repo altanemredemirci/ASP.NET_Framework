@@ -1,0 +1,59 @@
+﻿@using _08_Models.Models
+@model RegisterModel
+
+
+@{
+    ViewBag.Title = "Register";
+}
+
+
+
+<div class="row">
+    @*12 eşit parçalı bir satır oluşturur.*@
+
+    <div class="col-3"></div>
+    <div class="col-6">
+        <h2>Register</h2>
+        <form action="/Home/Register" method="post">
+            @Html.ValidationSummary(false)
+            <div class="mb-3">
+                <label class="form-label">First Name:</label>
+                <input type="text" class="form-control" name="FirstName" value="@Model.FirstName">               
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name:</label>
+                <input type="text" class="form-control" name="LastName" value="@Model.LastName">               
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Name:</label>
+                <input type="text" class="form-control" name="UserName" value="@Model.UserName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email adres:</label>
+                <input type="email" class="form-control" name="Email" value="@Model.Email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <input type="password" class="form-control" name="Password" value="@Model.Password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">RePassword:</label>
+                <input type="password" class="form-control" name="RePassword" value="@Model.RePassword">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-3"></div>
+
+
+</div>
+
+@*User Class
+    FirstName
+    LastName
+    Email
+    Username
+    Password
+
+*@
+

@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+@{ string ad = "Altan Emre";
+    string soyad = "Demirci";
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*Açıklama satırı*@
+        <h1>@ad <br /> @soyad </h1>
+        <br /><br />
+        @{string[] adlar = { "Mahmut", "Mehmet", "Muzaffer" };
+        }
+        <ul>
+            @foreach (string item in adlar)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <br /><br />
+
+        @for (int i = 0; i < 10; i++)
+        {
+            if (i % 2 == 0)
+            {
+                <h3>@i</h3>
+            }
+            else
+            {
+                <h6>@i*5</h6>
+            }
+        }
+    </div>
+</body>
+</html>
